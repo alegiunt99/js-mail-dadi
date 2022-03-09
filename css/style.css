@@ -4,15 +4,13 @@
     padding: 0;
 }
 
-#not-accepted,
 #accepted {
+    color: green;
     display: none;
 }
 
 #not-accepted {
     color: red;
+    display: none;
 }
 
-#accepted {
-    color: green;
-}

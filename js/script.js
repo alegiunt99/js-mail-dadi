@@ -11,9 +11,9 @@ const emailInput = document.querySelector('#email-input');
 
 const emailButton = document.querySelector('#email-button');
 
-let emailListAccepted = ["Giorgio25@gmail.com", "luca28@gmail.com", "giovanni47@gmail.com", "luigi94@gmail.com"];
 
-console.log(emailListAccepted);
+
+
 
 
 
@@ -23,8 +23,20 @@ emailButton.addEventListener("click",
 
         console.log('emailButton cliccato');
 
-
         const emailUser = emailInput.value;
 
         console.log('La mail dell utente è:' + emailUser);
+
+        let emailListAccepted = ["Giorgio25@gmail.com", "luca28@gmail.com", "giovanni47@gmail.com", "luigi94@gmail.com"];
+
+        console.log(emailListAccepted);
+
+        for (let i = 0; i < 4; i++){
+            if (emailUser === emailListAccepted[i]) {
+                document.querySelector('#accepted').style.display = 'block';
+                document.querySelector('#not-accepted').style.display = 'none';
+            } else {
+                document.querySelector('#not-accepted').style.display = 'block';
+            }
+        }
     })

@@ -63,26 +63,54 @@ emailButton.addEventListener("click",
 
 // GIOCO DEI DADI
 
-const randomNumbersUser = Math.floor((Math.random() * 6) + 1);
+const diceButton = document.querySelector("#tira-dado");
 
-const randomUser = [randomNumbersUser];
+diceButton.addEventListener("click",
+    function () {
 
-console.log(randomUser);
+        const randomNumbersUser = Math.floor((Math.random() * 6) + 1);
 
-const randomNumbersCPU = Math.floor((Math.random() * 6) + 1);
+        const randomUser = [randomNumbersUser];
 
-const randomCPU = [randomNumbersCPU];
+        document.querySelector('#user-number').innerText = `YOU: ${randomNumbersUser}`;
 
-console.log(randomCPU);
+        console.log(randomUser);
 
-for (i = 0; i < randomNumbersUser; i++){
+        const randomNumbersCPU = Math.floor((Math.random() * 6) + 1);
 
-    if (randomUser > randomCPU) {
-        console.log("Ha vinto l'user");
-    } else if (randomCPU > randomUser) {
-        console.log("Ha vinto il computer");
-    } else {
-        console.log("pareggio!");
-    }
+        const randomCPU = [randomNumbersCPU];
+
+        document.querySelector('#pc-number').innerText =`CPU: ${randomNumbersCPU}`;
+
+        console.log(randomCPU);
+
+        for (i = 0; i < randomNumbersUser; i++) {
+
+            if (randomUser > randomCPU) {
+
+                console.log("Ha vinto l'user");
+
+                document.querySelector('#you-win').style.display = 'block';
+
+                document.querySelector('#pc-win').style.display = 'none';
+
+                document.querySelector('#null').style.display = 'none';
+
+            } else if (randomCPU > randomUser) {
+                console.log("Ha vinto il computer");
+                document.querySelector('#pc-win').style.display = 'block';
+                
+                document.querySelector('#you-win').style.display = 'none';
+
+                document.querySelector('#null').style.display = 'none';
+
+            } else {
+                console.log("pareggio!");
+                document.querySelector('#null').style.display = 'block';
+                document.querySelector('#pc-win').style.display = 'none';
+                document.querySelector('#you-win').style.display = 'none';
+            }
     
-}
+        }
+
+    })

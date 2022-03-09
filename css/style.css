@@ -4,6 +4,19 @@
     padding: 0;
 }
 
+.container{
+    width: 80%;
+    margin: 47px auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    background-color: lightpink;
+    border-radius: 30px;
+    row-gap: 20px;
+    padding: 35px 25%;
+}
+
 #accepted {
     color: green;
     display: none;
@@ -13,4 +26,6 @@
     color: red;
     display: none;
 }
+
+
 

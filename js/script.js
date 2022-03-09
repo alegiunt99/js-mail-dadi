@@ -50,3 +50,39 @@ emailButton.addEventListener("click",
             }
         }
     })
+
+
+
+
+
+
+
+
+
+
+
+// GIOCO DEI DADI
+
+const randomNumbersUser = Math.floor((Math.random() * 6) + 1);
+
+const randomUser = [randomNumbersUser];
+
+console.log(randomUser);
+
+const randomNumbersCPU = Math.floor((Math.random() * 6) + 1);
+
+const randomCPU = [randomNumbersCPU];
+
+console.log(randomCPU);
+
+for (i = 0; i < randomNumbersUser; i++){
+
+    if (randomUser > randomCPU) {
+        console.log("Ha vinto l'user");
+    } else if (randomCPU > randomUser) {
+        console.log("Ha vinto il computer");
+    } else {
+        console.log("pareggio!");
+    }
+    
+}

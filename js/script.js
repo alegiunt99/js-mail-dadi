@@ -11,3 +11,20 @@ const emailInput = document.querySelector('#email-input');
 
 const emailButton = document.querySelector('#email-button');
 
+let emailListAccepted = ["Giorgio25@gmail.com", "luca28@gmail.com", "giovanni47@gmail.com", "luigi94@gmail.com"];
+
+console.log(emailListAccepted);
+
+
+
+
+emailButton.addEventListener("click",
+    function () {
+
+        console.log('emailButton cliccato');
+
+
+        const emailUser = emailInput.value;
+
+        console.log('La mail dell utente è:' + emailUser);
+    })

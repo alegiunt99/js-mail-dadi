@@ -3,3 +3,16 @@
     margin: 0;
     padding: 0;
 }
+
+#not-accepted,
+#accepted {
+    display: none;
+}
+
+#not-accepted {
+    color: red;
+}
+
+#accepted {
+    color: green;
+}

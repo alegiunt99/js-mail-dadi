@@ -68,6 +68,13 @@ const diceButton = document.querySelector("#tira-dado");
 diceButton.addEventListener("click",
     function () {
 
+        document.querySelector('#you-win').style.display = 'none';
+
+        document.querySelector('#pc-win').style.display = 'none';
+
+        document.querySelector('#null').style.display = 'none';
+
+
         const randomNumbersUser = Math.floor((Math.random() * 6) + 1);
 
         const randomUser = [randomNumbersUser];
@@ -92,23 +99,16 @@ diceButton.addEventListener("click",
 
                 document.querySelector('#you-win').style.display = 'block';
 
-                document.querySelector('#pc-win').style.display = 'none';
-
-                document.querySelector('#null').style.display = 'none';
-
+               
             } else if (randomCPU > randomUser) {
                 console.log("Ha vinto il computer");
                 document.querySelector('#pc-win').style.display = 'block';
                 
-                document.querySelector('#you-win').style.display = 'none';
-
-                document.querySelector('#null').style.display = 'none';
+            
 
             } else {
                 console.log("pareggio!");
                 document.querySelector('#null').style.display = 'block';
-                document.querySelector('#pc-win').style.display = 'none';
-                document.querySelector('#you-win').style.display = 'none';
             }
     
         }
